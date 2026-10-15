@@ -215,7 +215,6 @@ class TodoListMiddleware(AgentMiddleware[PlanningState[ResponseT], ContextT, Res
         """
         super().__init__()
         self.system_prompt = system_prompt
-        self.tool_description = tool_description
 
         self.tools = [
             StructuredTool.from_function(
